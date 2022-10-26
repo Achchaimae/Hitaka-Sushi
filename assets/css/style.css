@@ -1,0 +1,408 @@
+/* Some general styling */ 
+
+body 
+{
+    box-sizing: border-box;
+
+}
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior:smooth;
+}
+
+/* Styling home page */ 
+
+.Main-page
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav 
+{
+    width: 55vw;
+}
+
+.Main-page > nav
+{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.Navbar > .logo 
+{
+    width: 10rem;
+
+    
+}
+
+.Navbar > ul 
+{   
+    font-family: 'Tajawal';
+    color: #000000;
+    font-style: normal;
+    list-style: none;
+    display: flex;
+}
+.Navbar > ul > li 
+{
+    margin: 3rem;
+}
+.Navbar > ul > li> a{
+color: #000000;
+text-decoration: none;
+}
+.Search {
+    display: flex;
+    margin-right: 3rem;
+    gap: 0.6rem;
+    display: flex;
+    align-items: center;
+}
+.Search img{
+
+    width: 1rem;
+        
+  }
+.Search input{
+    border: none;
+    border-bottom: 0.1rem solid ;
+    outline: none;
+    
+    }
+.home-page-txt{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem;
+    position: relative;
+}
+.home-page-txt .txt{
+    margin-left: 7rem;
+}
+.home-page-txt h1{
+font-family: 'Playfair Display';
+font-weight: 400;
+font-size: 5rem;
+line-height: 128px;
+color: #000000;
+}
+.home-page-txt h3{
+
+font-family: 'Tajawal';
+font-weight: 500;
+font-size: 1.3rem;
+line-height: 38px;
+font-style:light;
+color: #727272;
+}
+.happy-sushi{
+    width: 7rem;
+}
+.home-img{
+
+    width: 12rem;
+}
+.scroll{
+    width: 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    background-color: #eee;
+    border-radius: 50%;
+    width: 30px;
+    padding: 5px;
+    transform: translateX(-50%);
+}
+.famous-plats
+{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 3rem 10rem;
+}
+.famous-plats-title{
+text-align: center;
+font-family: 'Playfair Display';
+font-weight: 400;
+font-size: 3rem;
+color: #000000;
+}
+
+.card
+{   text-align: center;
+    border:2px solid grey ;
+    background: #fff;
+    width:16rem;
+    height: 20rem;
+    border-radius: 15px ;
+    box-shadow: 0px 0px 10px gray;
+   
+}
+
+.card-image{
+    margin-bottom: 2rem;
+    background-color:white;
+    height: 150px;
+  
+ 
+}
+.p-1,.p-2,.p-3 {
+    border-radius: 15px 15px 0 0 ;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+.p-1 {
+    background-image: url(../images/plat/plat1.jpg);
+
+}
+.p-2 {
+    background-image: url(../images/plat/plat2.png);
+
+}
+.p-3 {
+    background-image: url(../images/plat/plat3.png);
+    
+}
+
+/*end home style*/
+/*about us style start*/
+/*need update*/
+.about{
+    margin: 4rem 0;
+}
+.image-about{
+    position: relative;
+    justify-content: center;
+    overflow: hidden;
+    height: 30rem;
+}
+.ingredients,.our-chefs,.our-story h1{
+    text-align:center;
+    font-family: 'Tajawal';
+}
+
+
+
+.our-story,.ingredients p{
+    justify-content:center;
+    font-family: 'Viner Hand ITC';
+    font-size: 1rem;
+    
+    color: #000000;
+}
+.our-chef {
+    
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+.our-chef div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+  
+}
+.buy img {
+    width: 1rem;
+}
+.buy{
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+.our-chef img{
+    width: 20rem;
+}
+/*end about us style*/
+/*start cart style*/
+.menu-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.menu-title img {
+    width: 12rem;
+}.menu-title h1{
+    font-size:3REM;
+    position: absolute;
+    margin-top: -7rem;
+}
+
+/*startv cart styling*/
+
+.container {
+        margin-bottom: 3rem;
+        gap: 3rem 0;
+        display: grid;
+        justify-content: space-evenly;
+        grid-template-columns: auto auto auto;
+}
+
+.container > .plat{
+   display: flex;
+flex-direction: column;
+background-color: #ccc;
+border-radius: 10px;
+width: 60%;
+
+
+}
+
+.container .plat .plat_img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.container .plat .plat_img img {
+    width: 80%;
+}
+.menu{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.plats {
+    text-align: center ;
+    margin-bottom: 3rem;
+    width:40rem;
+    justify-content: center;
+    height: 2rem;
+}
+
+.buy{
+    display: flex;
+    justify-content: space-around;
+    padding: .5rem 0;
+}
+.cart-body{
+    display: flex;
+    justify-content: center;
+}
+.receipt{
+    margin-bottom: 3rem;
+    background-color: white;
+    box-shadow: 0px 0px 5px gray;
+    border-radius: 15px;
+    gap: 1rem 0;
+    display: flex;
+    flex-direction: column;
+    width: 31%;
+    justify-content: space-around;
+    align-items: center;
+}
+.receipt h1{
+    text-align: center;
+}
+.receipt input{
+  
+    background-color: #FFCC29;
+    border-radius: 5px;
+    height: 2rem;
+    width: 6vw;
+}
+
+
+/*end styling cart*/
+/*start contact us */
+
+.contact-cont h1 {
+    text-align: center;
+    margin: 1rem 0 0;
+    font-size: 3rem;
+    color:#FFCC29 ;
+}
+.contact-cont .container {
+    width: 80%;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+.contact input{
+   text-align: center;
+    font-size: larger;
+    border: none;
+    border-bottom-color: currentcolor;
+    border-bottom-style: none;
+    border-bottom-width: medium;
+    border-bottom: 0.1rem solid;
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    margin: 2rem;
+    padding: 10px 0;
+    outline: none;
+    }
+  .contact-sushi img{
+    width: 30rem;
+  }
+/*end start contact us*/
+
+
+
+
+
+
+
+/*footer style*/
+.footer {
+    position: flex;
+    background: #727272;
+    display: flex;
+    align-items: center;
+    height: 154px;
+}
+footer{ 
+    text-align: center;
+    justify-content: center;
+    position: flex;
+    width:100%;
+    background: #727272;
+    height: 10vw;
+
+
+}
+.social-media{
+    justify-content:center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    gap: 1rem;
+}
+footer p {font-family: 'Tajawal';
+    justify-content: center;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.footer-logo {
+    width: 50px;
+}
+
+.footer-logo img {
+    width: 30px;
+}
+.footer-logo:first-child img {
+    width: 17px;
+}
+
+footer p a{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 400;
+}
+/*end footer style*/
