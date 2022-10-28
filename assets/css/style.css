@@ -260,7 +260,12 @@ background-color: #ccc;
 border-radius: 10px;
 width: 60%;
 
-
+}
+.ramen-plats{
+    display: none;
+}
+.ubento-plats{
+    display: none;
 }
 
 .container .plat .plat_img {
@@ -417,12 +422,35 @@ footer p a{
 
 /*responsive*/
 @media (max-width :890px) {
+    .show {
+        display: none !important;
+    }
     /*home responsive st*/
-    .Navbar > ul{
-        display: none;
+    .Navbar ul{
+        display: block;
+        position: absolute;
+        background-color:#FFCC29;
+        text-align: center;
+        border-radius: 0 20px 20px 0;
+        padding: 4rem 0 1rem 0;
+        z-index: 100;
+        left:0%;
     }
     .dropdown {
         display: block;
+    }
+   .dropdown img{
+    position: relative;
+    z-index: 1000;
+    background: white;
+    border-radius: 30px;
+    cursor: pointer;
+
+   }
+    .Navbar >ul >li > a{
+     color:white;
+     font-family: 'Tajawal';
+        font-weight: 700;
 
     }
     .home-page-txt{
@@ -523,12 +551,7 @@ footer p a{
     display: flex;
     flex-direction:column;
    }
-}
-/*2 eme responsive*/
-@media (max-width :px){
-    /*Home page*/
-    /*end home*/
 
-
+   
 }
-/**end 2 eme responive/
+
