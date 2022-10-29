@@ -256,10 +256,12 @@ color: #000000;
 .container > .plat{
    display: flex;
 flex-direction: column;
-background-color: #ccc;
+background-color: #fff;
 border-radius: 10px;
 width: 60%;
-
+height:fit-content;
+box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.25);
+justify-content: space-around;
 }
 .ramen-plats{
     display: none;
@@ -310,7 +312,8 @@ width: 60%;
     gap: 1rem 0;
     display: flex;
     flex-direction: column;
-    width: 31%;
+    width: fit-content;
+    height: fit-content;
     justify-content: space-around;
     align-items: center;
 }
@@ -324,7 +327,35 @@ width: 60%;
     height: 2rem;
     width: 6vw;
 }
+.quantite{
+    width: 2rem;
+    background-color: #FFCC29;
+    border-radius: 5px;
+    border: none;
+}
+.add-quantite,.delete-quantite{
+    border: none;
+    border-radius: 100%;
+    text-align: center;
+    width: 1rem;
+}
 
+.item-buy{
+margin: 2rem;
+    border :1px black solid;
+    border-radius: 12px;
+    box-shadow: 2px  2px 2px#FFCC29;
+    
+    width: 20rem;
+    height: 6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+}
+.your-shop img{
+    height: 5rem;
+}
 
 /*end styling cart*/
 /*start contact us */
