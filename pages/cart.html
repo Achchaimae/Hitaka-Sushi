@@ -166,10 +166,10 @@
         <!--miso-->
         <div class="ubento-plats" id="Miso">
             <div class="container suchi">
-                <div class="plat">
+                <div class="plat" id="item1">
                         <div class="plat_img">
-                            <img  class="plat-img"src="../assets/images/plat/Miso/miso1.png" alt="sushi">
-                            <h3>Miso 1</h3>
+                            <img  class="plat-img"src="../assets/images/plat/Miso/miso1.png" alt="Miso">
+                            <h3 class="title">Miso 1</h3>
                         </div>
 
                         <div class="buy">
@@ -179,7 +179,8 @@
                                     <button class="quantite">1</button>
                                     <button class="add-quantite">+</button> 
                                 </div>
-                                <img src="../assets/images/icon/add.png" alt="add">
+                                
+                                <img src="../assets/images/icon/add.png" alt="add" onclick="addToCart(item1)">
                         </div>
                 </div>
                 <div class="plat">
@@ -375,14 +376,15 @@
     
 
         <div class="receipt">
-            <h1>Receipt</h1>
+            <h1 class="title">Receipt</h1>
             <!-- itme buy card -->
             <div class="your-shop">
-                <div class="item-buy">
+                <!-- <div class="item-buy">
                     <img src="../assets/images/plat/Miso/miso1.png" alt="imag-buy">
                     <p><h3>MISO</h3></p>
                     <p><h3>x    1   </h3></p>
-                </div>
+                </div> -->
+
             </div>
             <!-- end itme buy card -->
             <input type="submit" name="buy"  value="Buy">

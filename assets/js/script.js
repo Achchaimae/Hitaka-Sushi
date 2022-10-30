@@ -41,16 +41,43 @@ delet.onclick=function(){
     }
     
 }
-let addToCart=document.querySelector(".add-icon");
-let receipt=document.querySelector(".your-shop");
-addToCart.onclick=function afiche(){
 
-     document.querySelector(".your-shop").innerHTML =Document.querySelector(".item.buy");
-     afiche==selectedElement ? selectedElement.style.display="flex" : el.style.display="none";
-    // console.log("true");
+// infinished function
+// let addToCart=document.querySelector(".add-icon");
+// let receipt=document.querySelector(".your-shop");
+// addToCart.onclick=function afiche(){
+    
+// // infinished function
+//      document.querySelector(".your-shop").innerHTML =Document.querySelector(".item.buy");
+//      afiche==selectedElement ? selectedElement.style.display="flex" : el.style.display="none";
+    
+//}
+// function add to cart
+var AddItemID=0;
+function addToCart(item){
+    console.log(item);
+AddItemID+=1;
+var selectedItem = document.getElementById('div');
+selectedItem.classList.add('img');
+selectedItem.setAttribute('id', AddItemID);
+var img=document.createElement('img');
+img.setAttribute('src',item.children[0].currentSrc);
+var title=document.createElement('div');
+title.innerText=item.children[1].innerText;
+var label=document.createElement('div');
+label.innerText=item.children[2].children[0].innerText;
+var select=document.createElement('span');
+select.innerText=item.children[2].children[1].value;
+label.append(select);
+var cartItems=document.getElementById('title');
+selectedItem.append(img);
+selectedItem.append(title); 
+selectedItem.append(label);
+cartItems.append(selectedItem);
+
 }
 
-function increment(qty){
-    return qty++;
-}
+
+// card add delete item ending
+
 
