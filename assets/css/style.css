@@ -324,8 +324,8 @@ justify-content: space-around;
   
     background-color: #FFCC29;
     border-radius: 5px;
-    height: 2rem;
-    width: 6vw;
+    /* height: 2rem; */
+    /* width: 6vw; */
 }
 .quantite{
     width: 2rem;
@@ -357,6 +357,73 @@ margin: 2rem;
     height: 5rem;
 }
 
+.receipt-box{
+    border: #000000 1px;
+    display: grid;
+    grid-template-columns:32% 50% 18% ;
+    align-items: center;
+    gap: 1rem;
+    margin-top:1rem ;
+}
+.receipt-img{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    padding: 10px;
+}
+.detail-box{
+    justify-content: space-between;
+    display: flex;
+    row-gap: 1rem;
+}
+.plat-title{
+    font-size: 1.5rem;
+}
+.plat-price{
+     font-weight: 500;
+}
+.cart-quantity{
+    border: 1px solid var(--text-color);
+    outline-color:var(--main-color);
+    width: 2.4rem;
+    text-align: center; 
+     font-size: 1rem; 
+}
+.plat-remove{
+    font-size:24px ;
+    color: var(--min-color);
+    cursor: pointer;   
+    color: #FFCC29;
+}
+.plat-price{
+    font-weight: 500;
+}
+.total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 1.5rem;
+    border-top:1px solid var(--text-color);
+}
+.total-title{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.total-price{
+    margin-left:0.5rem;
+}
+.btn-buy{
+    border-radius: 12px;
+    background-color: #FFCC29;
+    display: flex;
+    margin: 1.5rem auto 1rem auto;
+    padding: 12px 20px;
+    border: none;
+    color: var(--bg-color);
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+
+}
 /*end styling cart*/
 /*start contact us */
 
@@ -564,6 +631,8 @@ footer p a{
         height: 20rem;
         width: 60%;
     }
+
+
     /*About-us start styling*/
     .our-chef{
         display: flex;

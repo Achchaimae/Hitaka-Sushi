@@ -25,22 +25,42 @@ arr.forEach(el => {
 });
 
 // card add delete item starting
-let add=document.querySelector(".add-quantite");
-let delet=document.querySelector(".delete-quantite");
+let plus=document.querySelectorAll(".add-quantite");
+let minus=document.querySelectorAll(".delete-quantite");
 let quantite=document.querySelector(".quantite");
-add.onclick = function() {
-   
-    quantite.textContent = ++quantite.value;
+for (let i = 0; i < plus.length; i++) {
+    plus[i].addEventListener("click",plus_qty );
 }
-delet.onclick=function(){
-    if(quantite.value> 1){
-        quantite.textContent = --quantite.value;
-    }
-    else if(quantite.value=== 1) {
-        quantite.value =quantite.textContent;  
-    }
+for (let i = 0; i < minus.length; i++) {
+    minus[i].addEventListener("click",minus_qty );
+}
+
+
+function plus_qty(e){
+    let qty = e.target.parentElement.children[1];
+    
+    parseInt(qty.innerHTML++);
+
     
 }
+function minus_qty(e){
+    let qty = e.target.parentElement.children[1];
+    parseInt(qty.innerHTML--);
+    if (parseInt(qty.innerHTML--) <= 1) {
+        qty.innerHTML = 1;
+    }
+    // let qty=product.children[1].children[1].children[0].value;
+    // qty.textContent = --quantite.value;
+}
+// delet.onclick=function(){
+//     if(quantite.value> 1){
+//         quantite.textContent = --quantite.value;
+//     }
+//     else if(quantite.value=== 1) {
+//         quantite.value =quantite.textContent;  
+//     }
+    
+// }
 
 // infinished function
 // let addToCart=document.querySelector(".add-icon");
@@ -52,32 +72,76 @@ delet.onclick=function(){
 //      afiche==selectedElement ? selectedElement.style.display="flex" : el.style.display="none";
     
 //}
-// function add to cart
-var AddItemID=0;
-function addToCart(item){
-    console.log(item);
-AddItemID+=1;
-var selectedItem = document.getElementById('div');
-selectedItem.classList.add('img');
-selectedItem.setAttribute('id', AddItemID);
-var img=document.createElement('img');
-img.setAttribute('src',item.children[0].currentSrc);
-var title=document.createElement('div');
-title.innerText=item.children[1].innerText;
-var label=document.createElement('div');
-label.innerText=item.children[2].children[0].innerText;
-var select=document.createElement('span');
-select.innerText=item.children[2].children[1].value;
-label.append(select);
-var cartItems=document.getElementById('title');
-selectedItem.append(img);
-selectedItem.append(title); 
-selectedItem.append(label);
-cartItems.append(selectedItem);
+let addBtn=document.querySelectorAll("#add_btn");
+let placeItem = document.getElementById("items");
+let total = document.getElementById("total");
 
+let t = 0;
+
+for (let i = 0; i < addBtn.length; i++) {
+    addBtn[i].addEventListener("click", addToCart);
 }
 
+function addToCart(e){
+let product=e.target.parentElement.parentElement;
+let title=product.children[0].children[1].textContent;
+let img=product.children[0].children[0].src;
+let price= parseFloat(product.children[1].children[0].textContent);
+let qty= parseInt(product.children[1].children[1].children[1].textContent);
+placeItem.innerHTML += `<div class="receipt-box">
+                            <img src="${img}" alt="" class="receipt-img">
+                            <div class="detail-box">
+                                <div class="plat-title">${title}</div>
+                                <div class="plat-price">${qty} x $${price}</div>
+                            </div>
+                            <!-- remove cart -->
+                            <i class='bx bxs-trash plat-remove'></i>
+                            <hr><hr>
+                        </div>`
 
+        
+        
+
+
+t += qty * price 
+
+total.textContent = "$" + t;
+//Remove items from cart
+var removeCartButton=document.getElementsByClassName("plat-remove");
+
+for (var i = 0; i < removeCartButton.length; i++) {
+    var button = removeCartButton[i];
+    button.addEventListener("click", event => {
+        var buttonClicked=event.target;
+         buttonClicked.parentElement.remove();
+        t -= qty * price;
+        total.textContent = "$" + t;
+    })
+}
+// endRemove items from cart
+
+}
+//update total
+// function updateTotal(){
+//     var cartContent=document.getElementsByClassName("receipt-content")[0]
+//     var cartBoxes=cartContent.getElementsByClassName("receipt-box");
+//     var total=0;
+//     for (var i= 0 ; i < cartBoxes.length;i++){
+//         var cartBoxes=cartBoxes[i]
+//         var priceElement= cartBoxes.getElementsByClassName("plat-price")[0]
+//         var quantityElement=cartBoxes.getElementsByClassName("quantite")[0] 
+//         var price=parseFloat(priceElement.innerHTML.replace("$",""));
+//         var quantite=quantityElement.value;
+//         total=total+ (price* quantite);
+
+//         document.getElementsByClassName('total-price')[0].innerHTML= '$'+ total
+//     }
+// }
 // card add delete item ending
+
+
+
+
+
 
 
