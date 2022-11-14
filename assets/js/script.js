@@ -49,29 +49,7 @@ function minus_qty(e){
     if (parseInt(qty.innerHTML--) <= 1) {
         qty.innerHTML = 1;
     }
-    // let qty=product.children[1].children[1].children[0].value;
-    // qty.textContent = --quantite.value;
 }
-// delet.onclick=function(){
-//     if(quantite.value> 1){
-//         quantite.textContent = --quantite.value;
-//     }
-//     else if(quantite.value=== 1) {
-//         quantite.value =quantite.textContent;  
-//     }
-    
-// }
-
-// infinished function
-// let addToCart=document.querySelector(".add-icon");
-// let receipt=document.querySelector(".your-shop");
-// addToCart.onclick=function afiche(){
-    
-// // infinished function
-//      document.querySelector(".your-shop").innerHTML =Document.querySelector(".item.buy");
-//      afiche==selectedElement ? selectedElement.style.display="flex" : el.style.display="none";
-    
-//}
 let addBtn=document.querySelectorAll("#add_btn");
 let placeItem = document.getElementById("items");
 let total = document.getElementById("total");
@@ -113,35 +91,15 @@ for (var i = 0; i < removeCartButton.length; i++) {
     var button = removeCartButton[i];
     button.addEventListener("click", event => {
         var buttonClicked=event.target;
-         buttonClicked.parentElement.remove();
+        qty =buttonClicked.parentElement.querySelector('.plat-price').innerHTML.slice(0,2);
         t -= qty * price;
+        
+        buttonClicked.parentElement.remove();
+        
+        total.textContent='';
         total.textContent = "$" + t;
     })
 }
 // endRemove items from cart
 
 }
-//update total
-// function updateTotal(){
-//     var cartContent=document.getElementsByClassName("receipt-content")[0]
-//     var cartBoxes=cartContent.getElementsByClassName("receipt-box");
-//     var total=0;
-//     for (var i= 0 ; i < cartBoxes.length;i++){
-//         var cartBoxes=cartBoxes[i]
-//         var priceElement= cartBoxes.getElementsByClassName("plat-price")[0]
-//         var quantityElement=cartBoxes.getElementsByClassName("quantite")[0] 
-//         var price=parseFloat(priceElement.innerHTML.replace("$",""));
-//         var quantite=quantityElement.value;
-//         total=total+ (price* quantite);
-
-//         document.getElementsByClassName('total-price')[0].innerHTML= '$'+ total
-//     }
-// }
-// card add delete item ending
-
-
-
-
-
-
-
