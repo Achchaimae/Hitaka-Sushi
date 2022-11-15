@@ -92,12 +92,14 @@ for (var i = 0; i < removeCartButton.length; i++) {
     button.addEventListener("click", event => {
         var buttonClicked=event.target;
         qty =buttonClicked.parentElement.querySelector('.plat-price').innerHTML.slice(0,2);
+        price=buttonClicked.parentElement.querySelector('.plat-price').innerHTML.slice(-4);
         t -= qty * price;
         
-        buttonClicked.parentElement.remove();
+        
         
         total.textContent='';
         total.textContent = "$" + t;
+        buttonClicked.parentElement.remove();
     })
 }
 // endRemove items from cart
