@@ -172,7 +172,9 @@ color: #000000;
     background-image: url(../images/plat/plat3.png);
     
 }
-
+.card h2{
+    color: #FFCC29;
+}
 /*end home style*/
 /*about us style start*/
 /*need update*/
@@ -259,7 +261,7 @@ flex-direction: column;
 background-color: #fff;
 border-radius: 10px;
 width: 60%;
-/* height:fit-content; */
+ height:16rem; 
 box-shadow: -4px -4px 4px rgba(0, 0, 0, 0.25), 4px 4px 4px rgba(0, 0, 0, 0.25);
 justify-content: space-around;
 }
@@ -359,15 +361,18 @@ margin: 2rem;
 
 .receipt-box{
     border: #000000 1px;
-    display: grid;
-    grid-template-columns:32% 50% 18% ;
+     display: grid;
+    grid-template-columns:1fr 2fr 1fr; 
+    /* display: flex; */
     align-items: center;
     gap: 1rem;
     margin-top:1rem ;
+        padding: 5px;
 }
+
 .receipt-img{
-    width: 100px;
-    height: 100px;
+    width: 70px;
+    height: 70px;
     object-fit: contain;
     padding: 10px;
 }
@@ -608,6 +613,10 @@ footer p a{
     }
     .card{
         margin-bottom: 1.4rem;
+    }
+    .card:hover{
+        cursor: pointer;
+        opacity: 1;
     }
     .cart-body {
         display: flex;

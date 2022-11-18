@@ -67,13 +67,16 @@ let img=product.children[0].children[0].src;
 let price= parseFloat(product.children[1].children[0].textContent);
 let qty= parseInt(product.children[1].children[1].children[1].textContent);
 placeItem.innerHTML += `<div class="receipt-box">
-                            <img src="${img}" alt="" class="receipt-img">
+                            <div> <img src="${img}" alt="" class="receipt-img"></div>
+                           
                             <div class="detail-box">
                                 <div class="plat-title">${title}</div>
+                                <div>  </div>
                                 <div class="plat-price">${qty} x $${price}</div>
                             </div>
                             <!-- remove cart -->
                             <i class='bx bxs-trash plat-remove'></i>
+                            
                             <hr><hr>
                         </div>`
 
@@ -104,4 +107,8 @@ for (var i = 0; i < removeCartButton.length; i++) {
 }
 // endRemove items from cart
 
+}
+function tocart(e){
+
+let result = text.link();
 }
