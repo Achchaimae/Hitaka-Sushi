@@ -253,6 +253,7 @@ color: #000000;
         display: grid;
         justify-content: space-evenly;
         grid-template-columns: auto auto auto;
+        justify-items: center;
 }
 
 .container > .plat{
@@ -431,7 +432,9 @@ margin: 2rem;
 }
 /*end styling cart*/
 /*start contact us */
-
+.contact{
+    justify-items: center;
+}
 .contact-cont h1 {
     text-align: center;
     margin: 1rem 0 0;
@@ -439,7 +442,7 @@ margin: 2rem;
     color:#FFCC29 ;
 }
 .contact-cont .container {
-    width: 80%;
+    width: 100%;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
     align-items: center;
