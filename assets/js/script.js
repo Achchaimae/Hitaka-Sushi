@@ -112,3 +112,31 @@ function tocart(e){
 
 let result = text.link();
 }
+// card add delete item ending
+//reset cart
+// let resetBtn=document.getElementById("btn-buy");
+// resetBtn.addEventListener("click",resetCart);
+// function resetCart(){
+//     for (let i = 0; i < addBtn.length; i++) {
+//         addBtn[i].addEventListener("click", addToCart);
+//     }
+//     placeItem.innerHTML='';
+//     total.textContent='';
+//     t=0;
+// }
+//end reset cart
+//reset cart
+var resetBtn=document.getElementsByClassName("btn-buy");
+for (let i = 0; i < resetBtn.length; i++) {
+    resetBtn[i].addEventListener("click",event => {
+        var buttonClicked=event.target;
+        var content= buttonClicked.parentElement
+        content.children[1].children[0].remove();
+        placeItem.innerHTML='';
+         
+          t=0;
+          total.textContent='';
+          total.textContent = "$" + t;
+         
+    })
+}
